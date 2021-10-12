@@ -1,0 +1,19 @@
+CREATE DATABASE PgeeBlog;
+
+CREATE TABLE users(
+    user_id SERIAL PRIMARY KEY,
+    email VARCHAR(65) NOT NULL,
+    username VARCHAR(35) NOT NULL,
+    user_uid VARCHAR(35) NOT NULL,
+    pwd VARCHAR(45) NOT NULL
+);
+
+CREATE TABLE articles(
+    article_id SERIAL PRIMARY KEY,
+    title VARCHAR(25) NOT NULL,
+    description VARCHAR(65) NOT NULL,
+    createdAt VARCHAR(255) NOT NULL,
+    createdBy VARCHAR(35) NOT NULL
+);
+
+CREATE TABLE pictures();
