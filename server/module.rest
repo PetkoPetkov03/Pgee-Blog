@@ -1,0 +1,12 @@
+GET http://localhost:5000/articles
+
+###
+
+POST http://localhost:5000/articles/new
+Content-Type: application/json
+
+{
+    "title": "Title",
+    "description": "y u so mad",
+    "createdby": "user"
+}
