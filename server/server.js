@@ -3,7 +3,7 @@ import cors from "cors";
 import router from "./routes/router.js";
 import mongoose from "mongoose"
 
-await mongoose.connect("mongodb+srv://petko:56R2pkMoT1KVGpKx@pgee.ik5lg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+await mongoose.connect(proccess.env.MONGO_URI);
 const db = mongoose.connection;
 
 const app = express();
