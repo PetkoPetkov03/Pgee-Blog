@@ -1,0 +1,44 @@
+body{
+  width: 100%;
+}
+
+.wrapper{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper > a{
+  margin-top: 30px;
+}
+
+.article-body{
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.component{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  margin-top: 50px;
+  align-items: center;
+  border: 1px solid #dedede;
+  margin-top: 7px;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2); 
+  position: relative;
+  width: 55%;
+  word-break: break-all;
+  margin-top: 15px;
+}
+
+.component > button {
+  width: 30%;
+}

@@ -1,0 +1,29 @@
+.header{
+    display: flex;
+    border-bottom: 1px solid #dedede;
+    justify-content: space-around;
+    align-items: center;
+    color: #1976d2;
+}
+
+.header h3 {
+    margin-top: 10%;
+}
+.header-svg{
+    display: flex;
+}
+
+.header img {
+    display: block;
+    max-width:230px;
+    max-height:55px;
+    width: auto;
+    height: auto;
+}
+.search-bar{
+   border: 1px solid #dedede;
+}
+
+.search-bar:active{
+    border: 1px solid #1976d2;
+}
