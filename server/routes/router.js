@@ -7,6 +7,7 @@ const router = express.Router();
 router.get("/pictures", async(req, res) => {
     try {
         const pictures = await PictureURL.find({});
+
         res.json(pictures);
     } catch (err) {
         console.error(err.message);
@@ -18,6 +19,7 @@ router.get("/pictures/:id", async(req, res) => {
 
     try {
         const currentPicture = await PictureURL.findById(id);
+
         res.json(currentPicture);
     } catch (err) {
         res.json(err.message);
@@ -47,6 +49,7 @@ router.post("/pictures/new", async(req,res) => {
         })
 
         await newPicture.save();
+
         res.json("Article created");
     } catch (err) {
         res.json(err.message);
@@ -74,6 +77,7 @@ router.delete("/articles/:id", async(req, res) => {
     const id = req.params.id;
     try {
         const article = await Articles.findByIdAndDelete(id);
+
         res.json("Deleted successfully");
     } catch (err) {
         console.error(err.message);
@@ -91,7 +95,6 @@ router.put("/articles/:id", async(req, res) => {
         const process = article.overwrite({title: body.title, description: body.description, createdat: Date.now(), createdby: article.createdby});
 
         const updatedArticle = await process.save();
-
         res.json(updatedArticle);
 
     } catch (err) {
@@ -104,7 +107,7 @@ router.get("/articles", async(req, res) => {
         const articles = await Articles.find({});
         res.json(articles);
     } catch (err) {
-        res.status(500).json({message: err.message});
+        console.error(err.message);
     }
 });
 
