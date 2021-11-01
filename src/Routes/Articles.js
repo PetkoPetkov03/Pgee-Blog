@@ -97,7 +97,7 @@ const Articles = () => {
                     </div>
                     </div>
                 );
-            })
+            }).reverse()
         );
     }
 }
